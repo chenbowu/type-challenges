@@ -58,6 +58,10 @@ interface Expected1 {
   title: string
 }
 
+interface Expected1 {
+  title: string
+}
+
 interface Expected2 {
   title: string
   completed: boolean
