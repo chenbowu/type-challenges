@@ -1,4 +1,5 @@
 type AwaitedArray<T extends any[]> = T extends [infer First, ...infer Rest]
+    // NOTE 如何理解这里的递归，以及使用扩展运算符
     // AwaitedArray<[1, 2, 3]>
     // 1. [Awaited<1>, ...AwaitedArray<[2,3]>]
     // 2. [Awaited<2>, ...AwaitedArray<[3]>]
