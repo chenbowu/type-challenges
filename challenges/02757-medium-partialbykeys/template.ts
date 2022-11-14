@@ -5,11 +5,3 @@ type PartialByKeys<T, K extends keyof T = keyof T> = ({
 }) extends infer R ? {
     [Key in keyof R]: R[Key]
 } : never
-
-
-interface User {
-  name: string
-  age: number
-  address: string
-}
-type ts = PartialByKeys<User, 'name'>
