@@ -1,0 +1,1 @@
+type Shift<T extends unknown[]> = T extends [] ? [] : T extends [infer Head, ...infer Rest] ? Rest : never
