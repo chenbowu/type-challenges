@@ -1,7 +1,7 @@
 type TupleToNestedObject<T, U> = T extends [] 
     ? U 
-    : T extends [infer First, ...infer Rest]
+    : T extends [`${infer First}`, ...infer Rest]
         ? {
-            [K in First as First extends string ? First : never]: TupleToNestedObject<Rest, U>
+            [K in First]: TupleToNestedObject<Rest, U>
         }
         : never
