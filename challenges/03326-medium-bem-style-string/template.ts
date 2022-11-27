@@ -1,3 +1,3 @@
 // https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html
-type WithPrefix<S extends string[], P extends string> = S extends [] ? '' : `${P}${S[number]}`
-type BEM<B extends string, E extends string[], M extends string[]> = `${B}${WithPrefix<E, '__'>}${WithPrefix<M, '--'>}`
+type WithPrefix<P extends string, T extends any[]> = T extends [] ? '' : `${P}${T[number]}`
+type BEM<B extends string, E extends any[], M extends any[]> = `${B}${WithPrefix<'__', E>}${WithPrefix<'--', M>}`
