@@ -13,13 +13,3 @@ type InorderTraversal<T extends TreeNode | null> = [T] extends [TreeNode]
 // type InorderTraversal2<T extends TreeNode | null> = T extends TreeNode
 //     ? [...InorderTraversal2<T['left']>, T['val'], ...InorderTraversal2<T['right']>]
 //     : []
-
-const tree4 = {
-  val: 1,
-  left: null,
-  right: {
-    val: 2,
-    left: null,
-    right: null,
-  },
-} as const
